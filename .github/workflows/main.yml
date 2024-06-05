@@ -67,8 +67,7 @@ jobs:
       - name: Move Artifacts to Correct Location
         run: |
           mkdir -p build
-          find . -maxdepth 1 -type f -exec mv {} build/ \;
-          mv src ./build
+          mv * ./build
 
       - name: List Build Artifacts
         run: ls -l ./build
